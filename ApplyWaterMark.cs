@@ -12,8 +12,8 @@ public static class ApplyWatermark
 {
     [FunctionName("ApplyWatermark")]
     public static async Task<IActionResult> Run(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "WaterMarker/{imageUrl}/{x}/{y}/{watermarkText}/{outputFileName}")] HttpRequest req, 
-        string imageUrl, int x, int y, string watermarkText, string outputFileName,
+        [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "WaterMarker/{imageUrl}/{x}/{y}/{watermarkText}")] HttpRequest req, 
+        string imageUrl, int x, int y, string watermarkText,
         ILogger log)
     {
         log.LogInformation("C# HTTP trigger function processed a request for a watermark.");
